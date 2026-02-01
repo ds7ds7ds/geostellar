@@ -6,7 +6,10 @@ import {
   Target,
   Globe,
   Linkedin,
-  Mail
+  Mail,
+  HardHat,
+  Wrench,
+  ClipboardCheck
 } from 'lucide-react'
 
 const AboutPage = () => {
@@ -35,62 +38,43 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: "Alex Petrov",
-      role: "Founder & Principal Engineer",
-      background: "O&G / Geothermal",
-      experience: "20+ years",
-      bio: "Former senior drilling engineer with 15 years in offshore O&G before transitioning to geothermal. Expert in thermal conductivity testing and system optimization.",
-      specialties: ["Thermal Analysis", "System Design", "QA/QC Protocols"]
-    },
-    {
-      name: "Maria Santos",
-      role: "Director of Engineering",
-      background: "Mechanical Engineering",
+      role: "Principal Engineer",
+      background: "Oil & Gas Field Operations",
+      icon: <HardHat className="h-8 w-8" />,
       experience: "15+ years",
-      bio: "Led engineering teams at major HVAC firms before joining GeoStellar. Specializes in heat pump integration and commercial-scale system design.",
-      specialties: ["Heat Pump Systems", "Commercial Design", "Energy Modeling"]
+      bio: "Extensive experience in offshore and onshore O&G field operations, wellsite supervision, and drilling engineering. Brings rigorous field standards to every geothermal project.",
+      specialties: ["Field Operations", "Drilling Supervision", "QA/QC Protocols", "Safety Management"]
     },
     {
-      name: "James Chen",
-      role: "Field Operations Manager",
-      background: "O&G Field Services",
-      experience: "18+ years",
-      bio: "Extensive experience in wellsite supervision and quality control. Brings rigorous O&G field standards to every geothermal installation.",
-      specialties: ["Installation Oversight", "Quality Control", "Safety Management"]
-    },
-    {
-      name: "Sarah Mitchell",
-      role: "Technical Services Lead",
-      background: "Geoscience / Testing",
+      role: "Senior Engineer",
+      background: "Oil & Gas Engineering",
+      icon: <Wrench className="h-8 w-8" />,
       experience: "12+ years",
-      bio: "Geologist with expertise in subsurface thermal characterization. Leads all thermal conductivity testing and ground analysis operations.",
-      specialties: ["TRT Testing", "Ground Analysis", "Performance Verification"]
+      bio: "Deep expertise in O&G systems engineering, optimization, and performance analysis. Specializes in translating complex technical requirements into efficient, reliable solutions.",
+      specialties: ["Systems Engineering", "Performance Optimization", "Technical Analysis", "Process Design"]
     },
     {
-      name: "David Kumar",
-      role: "Senior Design Engineer",
-      background: "Energy Systems",
+      role: "Licensed Professional Engineer (PE)",
+      background: "Mechanical Engineering",
+      icon: <ClipboardCheck className="h-8 w-8" />,
       experience: "10+ years",
-      bio: "Specialized in ground-source heat pump system design for residential and light commercial applications.",
-      specialties: ["Loop Design", "Load Calculations", "CAD/BIM"]
-    },
-    {
-      name: "Elena Volkov",
-      role: "Commissioning Specialist",
-      background: "Controls Engineering",
-      experience: "8+ years",
-      bio: "Expert in system startup, controls integration, and performance optimization. Ensures every system delivers from day one.",
-      specialties: ["System Startup", "Controls", "Performance Tuning"]
+      bio: "Massachusetts-licensed PE with expertise in thermal systems, HVAC integration, and geothermal design. Ensures all projects meet code requirements and engineering best practices.",
+      specialties: ["PE Stamping", "Thermal Systems", "Code Compliance", "Geothermal Design"]
     }
   ]
 
   const milestones = [
-    { year: "2015", event: "GeoStellar founded with O&G industry veterans" },
-    { year: "2017", event: "Expanded to full-service geothermal engineering" },
-    { year: "2019", event: "Opened Northeast regional operations center" },
-    { year: "2021", event: "500th project milestone achieved" },
-    { year: "2023", event: "Launched advanced DTS monitoring services" },
-    { year: "2024", event: "725+ projects completed across Northeast" }
+    { year: "2010", event: "Oil & gas field experience begins — operations on rigs", highlight: false },
+    { year: "2015", event: "Engineering and optimization expertise developed", highlight: false },
+    { year: "2022", event: "Transition to geothermal: design, build, execution", highlight: false },
+    { year: "2026", event: "GeoStellar founded — O&G precision meets geothermal", highlight: true }
+  ]
+
+  const stats = [
+    { value: "16+", label: "Years Combined Experience" },
+    { value: "3", label: "Core Team Members" },
+    { value: "2", label: "O&G Veterans" },
+    { value: "1", label: "Licensed PE" }
   ]
 
   return (
@@ -114,44 +98,73 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-slate-950 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="text-4xl md:text-5xl font-light text-sky-400 mb-2 group-hover:scale-110 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-slate-500 tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Story Section */}
-      <section className="py-24 bg-slate-950">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">OUR STORY</h2>
+              <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">OUR JOURNEY</h2>
               <h3 className="text-3xl font-light text-white mb-6">
                 From Oilfields to Ground Loops
               </h3>
               <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                  After decades in offshore drilling and petroleum engineering, our founders recognized 
-                  a gap in the geothermal industry: the lack of rigorous technical standards that are 
-                  commonplace in oil & gas.
+                  Our journey began in <span className="text-white">2010 on oil & gas rigs</span> — learning 
+                  firsthand why precision, safety, and quality control aren't just nice-to-haves in high-stakes 
+                  environments. They're survival.
                 </p>
                 <p>
-                  They saw contractors struggling with inconsistent designs, unreliable testing, and 
-                  quality control that varied wildly from project to project. The solution was clear — 
-                  bring O&G discipline to geothermal.
+                  By <span className="text-white">2015</span>, we were deep into engineering and optimization, 
+                  developing the technical discipline that would later define our approach to every project.
                 </p>
                 <p>
-                  Today, GeoStellar serves as the technical backbone for contractors and engineering 
-                  firms across the Northeast, providing the expertise and quality assurance that 
-                  elevates every project we touch.
+                  In <span className="text-white">2022</span>, we saw the opportunity: geothermal needed the 
+                  same rigor we'd built in O&G. We began designing, building, and executing geothermal systems 
+                  with industry-leading standards.
+                </p>
+                <p>
+                  <span className="text-sky-400 font-medium">2026 marks the founding of GeoStellar</span> — 
+                  bringing everything together into a consultancy dedicated to making O&G-grade precision 
+                  the standard in geothermal, not the exception.
                 </p>
               </div>
             </div>
 
             {/* Timeline */}
-            <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-8">
-              <h4 className="text-sm font-semibold text-sky-400 tracking-widest mb-6">MILESTONES</h4>
+            <div className="bg-slate-950/50 border border-slate-800 rounded-lg p-8">
+              <h4 className="text-sm font-semibold text-sky-400 tracking-widest mb-6">OUR EXPERTISE TIMELINE</h4>
               <div className="space-y-6">
                 {milestones.map((m, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="text-sky-500 font-mono text-sm w-16 flex-shrink-0">{m.year}</div>
-                    <div className="text-slate-300 text-sm">{m.event}</div>
+                  <div key={index} className={`flex items-start ${m.highlight ? 'pl-4 border-l-2 border-sky-500' : ''}`}>
+                    <div className={`font-mono text-sm w-16 flex-shrink-0 ${m.highlight ? 'text-sky-400 font-semibold' : 'text-sky-500'}`}>
+                      {m.year}
+                    </div>
+                    <div className={`text-sm ${m.highlight ? 'text-white font-medium' : 'text-slate-300'}`}>
+                      {m.event}
+                    </div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-8 pt-6 border-t border-slate-700">
+                <p className="text-xs text-slate-500 italic">
+                  GeoStellar is new. Our expertise is not.
+                </p>
               </div>
             </div>
           </div>
@@ -159,7 +172,7 @@ const AboutPage = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-slate-900 border-y border-slate-800">
+      <section className="py-24 bg-slate-950 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">OUR VALUES</h2>
@@ -172,7 +185,7 @@ const AboutPage = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="p-6 bg-slate-950/50 border border-slate-800 rounded-lg"
+                className="p-6 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all hover-lift"
               >
                 <div className="text-sky-500 mb-4">{value.icon}</div>
                 <h3 className="text-lg font-medium text-white mb-2">{value.title}</h3>
@@ -184,7 +197,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-slate-950">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">THE TEAM</h2>
@@ -192,47 +205,77 @@ const AboutPage = () => {
               Industry Veterans. Technical Experts.
             </p>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Our team combines decades of oil & gas experience with deep geothermal expertise.
+              A focused team combining oil & gas field experience with licensed engineering expertise.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group p-6 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all"
+                className="group p-8 bg-slate-950/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all hover-lift"
               >
-                {/* Avatar placeholder */}
-                <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-full mb-4 flex items-center justify-center text-slate-900 font-bold text-xl">
-                  {member.name.split(' ').map(n => n[0]).join('')}
+                {/* Icon */}
+                <div className="w-16 h-16 bg-gradient-to-br from-sky-500/20 to-cyan-500/20 rounded-full mb-6 flex items-center justify-center text-sky-500 group-hover:scale-110 transition-transform">
+                  {member.icon}
                 </div>
                 
-                <h3 className="text-lg font-medium text-white">{member.name}</h3>
-                <p className="text-sky-400 text-sm mb-1">{member.role}</p>
-                <p className="text-slate-500 text-xs mb-4">
-                  {member.background} • {member.experience}
-                </p>
+                <h3 className="text-xl font-medium text-white mb-1">{member.role}</h3>
+                <p className="text-sky-400 text-sm mb-1">{member.background}</p>
+                <p className="text-slate-500 text-xs mb-4">{member.experience}</p>
                 
-                <p className="text-slate-400 text-sm leading-relaxed mb-4">{member.bio}</p>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">{member.bio}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {member.specialties.map((spec, i) => (
                     <span key={i} className="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded">
                       {spec}
                     </span>
                   ))}
                 </div>
-
-                <div className="flex space-x-3 pt-4 border-t border-slate-800">
-                  <a href="#" className="text-slate-500 hover:text-sky-400 transition-colors">
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                  <a href="#" className="text-slate-500 hover:text-sky-400 transition-colors">
-                    <Mail className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">LOCATION</h2>
+              <h3 className="text-3xl font-light text-white mb-6">
+                Based in Massachusetts,
+                <br />
+                <span className="gradient-text font-semibold">Serving the Northeast</span>
+              </h3>
+              <div className="space-y-4 text-slate-400">
+                <p>
+                  <span className="text-white">394 Atkins Ave</span><br />
+                  Stoughton, MA 02072
+                </p>
+                <p>
+                  <span className="text-white">(781) 654-5879</span>
+                </p>
+                <p className="text-sm">
+                  Strategically located to serve contractors and engineering firms 
+                  throughout New England and the greater Northeast region.
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-8">
+              <h4 className="text-sm font-semibold text-sky-400 tracking-widest mb-4">SERVICE AREA</h4>
+              <div className="grid grid-cols-2 gap-4">
+                {["Massachusetts", "New Hampshire", "Rhode Island", "Connecticut", "Maine", "Vermont", "New York", "New Jersey"].map((state, index) => (
+                  <div key={index} className="flex items-center text-slate-300 text-sm">
+                    <div className="w-2 h-2 bg-sky-500 rounded-full mr-2" />
+                    {state}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -249,10 +292,10 @@ const AboutPage = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-sky-500 hover:bg-sky-400 text-slate-900 font-medium rounded transition-all hover:shadow-lg hover:shadow-sky-500/25"
+            className="group inline-flex items-center px-8 py-4 bg-sky-500 hover:bg-sky-400 text-slate-900 font-medium rounded transition-all hover:shadow-lg hover:shadow-sky-500/25"
           >
             Get in Touch
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </section>

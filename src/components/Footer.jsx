@@ -40,9 +40,9 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">CONTACT</h4>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2 text-slate-400 text-sm">
-                <MapPin className="h-4 w-4 text-sky-500" />
-                <span>Northeast USA</span>
+              <li className="flex items-start space-x-2 text-slate-400 text-sm">
+                <MapPin className="h-4 w-4 text-sky-500 mt-0.5 flex-shrink-0" />
+                <span>394 Atkins Ave<br />Stoughton, MA 02072</span>
               </li>
               <li className="flex items-center space-x-2 text-slate-400 text-sm">
                 <Mail className="h-4 w-4 text-sky-500" />
@@ -52,8 +52,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-slate-400 text-sm">
                 <Phone className="h-4 w-4 text-sky-500" />
-                <a href="tel:+1234567890" className="hover:text-sky-400 transition-colors">
-                  (123) 456-7890
+                <a href="tel:+17816545879" className="hover:text-sky-400 transition-colors">
+                  (781) 654-5879
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-slate-400 text-sm">
