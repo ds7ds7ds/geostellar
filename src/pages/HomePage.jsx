@@ -11,7 +11,15 @@ import {
   CheckCircle2,
   DollarSign,
   TrendingDown,
-  Zap
+  Zap,
+  Maximize2,
+  Flame,
+  Grid3X3,
+  CircleDollarSign,
+  Clock,
+  FileCheck,
+  Banknote,
+  Settings2
 } from 'lucide-react'
 
 const HomePage = () => {
@@ -39,40 +47,32 @@ const HomePage = () => {
   ]
 
   const sectors = [
-    { icon: <Home className="h-8 w-8" />, label: "Residential", count: "500+" },
-    { icon: <Building2 className="h-8 w-8" />, label: "Commercial", count: "150+" },
-    { icon: <Factory className="h-8 w-8" />, label: "Industrial", count: "75+" }
+    { icon: <Home className="h-8 w-8" />, label: "Residential" },
+    { icon: <Building2 className="h-8 w-8" />, label: "Commercial" },
+    { icon: <Factory className="h-8 w-8" />, label: "Industrial" }
   ]
 
-  const stats = [
-    { value: "15+", label: "Years Experience" },
-    { value: "725+", label: "Projects Completed" },
-    { value: "99.2%", label: "System Efficiency" },
-    { value: "0", label: "Compromise on Quality" }
+  const optimizationLevers = [
+    "Borefield layout and thermal interaction",
+    "Vertical vs collocated vs directional geometry",
+    "Spacing and interference management",
+    "Grout conductivity and placement quality",
+    "Flow rates, Reynolds regime, and pressure losses",
+    "Verified drilling geometry and QC data"
   ]
 
-  const comparison = [
-    { 
-      icon: <DollarSign className="h-8 w-8" />,
-      og: "$10K - $100K",
-      ogLabel: "per hour in O&G",
-      geo: "Accessible",
-      geoLabel: "for everyone"
-    },
-    { 
-      icon: <Target className="h-8 w-8" />,
-      og: "Critical",
-      ogLabel: "precision required",
-      geo: "Same Standard",
-      geoLabel: "no compromise"
-    },
-    { 
-      icon: <TrendingDown className="h-8 w-8" />,
-      og: "High Stakes",
-      ogLabel: "costly mistakes",
-      geo: "Optimized",
-      geoLabel: "efficient delivery"
-    }
+  const costBenefits = [
+    { icon: <DollarSign className="h-5 w-5" />, label: "Lower CAPEX", desc: "through footprint efficiency" },
+    { icon: <Settings2 className="h-5 w-5" />, label: "Lower OPEX", desc: "through optimized hydraulics" },
+    { icon: <Shield className="h-5 w-5" />, label: "Lower Risk", desc: "through verified subsurface control" },
+    { icon: <Clock className="h-5 w-5" />, label: "Lower Lifecycle Cost", desc: "over 20–30 years" }
+  ]
+
+  const systemBenefits = [
+    { icon: <FileCheck className="h-5 w-5" />, text: "Easier to permit" },
+    { icon: <Banknote className="h-5 w-5" />, text: "Cheaper to finance" },
+    { icon: <Shield className="h-5 w-5" />, text: "Safer to own" },
+    { icon: <Gauge className="h-5 w-5" />, text: "Cheaper to operate" }
   ]
 
   return (
@@ -101,20 +101,18 @@ const HomePage = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-6 animate-slide-up animation-delay-200">
-              O&G Precision.
+              Maximum BTU/ft².
               <br />
-              <span className="gradient-text font-semibold">Accessible to All.</span>
+              <span className="gradient-text font-semibold">Minimum Lifetime Cost.</span>
             </h1>
             
             <p className="text-xl text-slate-400 leading-relaxed mb-4 max-w-3xl animate-slide-up animation-delay-400">
-              In oil & gas, one hour costs <span className="text-sky-400 font-semibold">$10,000 to $100,000</span>. 
-              That's why precision, quality, and efficiency aren't optional — they're survival.
+              We bring <span className="text-sky-400 font-semibold">oil & gas precision</span> to geothermal — 
+              not to be expensive, but to make clean energy <span className="text-white">accessible for everyone</span>.
             </p>
             
-            <p className="text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl animate-slide-up animation-delay-600">
-              We bring that same uncompromising standard to geothermal — not to be expensive, 
-              but to make <span className="text-cyan-400 font-semibold">clean energy accessible for everyone</span>. 
-              When every watt matters, optimization isn't a luxury. It's the mission.
+            <p className="text-lg text-slate-500 leading-relaxed mb-8 max-w-3xl animate-slide-up animation-delay-600">
+              <em>Thermal density optimized through geometry, hydraulics, and verified field performance.</em>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-800">
@@ -142,48 +140,172 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* The Why Section - NEW */}
+      {/* Core Design Principle Section */}
       <section className="py-24 bg-slate-950 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm mb-6">
+                <Flame className="h-4 w-4 mr-2" />
+                Core Design Principle
+              </div>
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
+                Maximum BTU per Square Foot —
+                <br />
+                <span className="gradient-text font-semibold">At the Lowest Lifecycle Cost</span>
+              </h2>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                This is the foundation of every GeoStellar design. Our objective is simple and measurable:
+              </p>
+              <div className="p-6 bg-slate-900/50 border-l-4 border-sky-500 rounded-r-lg mb-8">
+                <p className="text-lg text-white">
+                  Deliver the <span className="text-sky-400 font-semibold">highest thermal output per square foot of land</span>, 
+                  at the <span className="text-cyan-400 font-semibold">lowest total cost of ownership</span>.
+                </p>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                That means optimizing <span className="text-white">geometry, spacing, depth, hydraulics, and thermal exchange</span> — 
+                not overbuilding, not guessing, and not wasting real estate or capital.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="p-6 bg-slate-900/50 border border-slate-800 rounded-lg">
+                <h3 className="text-lg font-medium text-white mb-4 flex items-center">
+                  <Grid3X3 className="h-5 w-5 text-sky-500 mr-2" />
+                  Engineering for Density, Not Just Depth
+                </h3>
+                <p className="text-sm text-slate-400 mb-4">
+                  Traditional design focuses on bore depth and rule-of-thumb spacing. 
+                  We engineer for <span className="text-white">thermal density</span> instead:
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Maximizing BTU/ft² of available surface area",
+                    "Reducing unnecessary drilling footage",
+                    "Minimizing surface disturbance",
+                    "Avoiding future performance degradation",
+                    "Designing for consistent performance over decades"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start text-sm text-slate-300">
+                      <CheckCircle2 className="h-4 w-4 text-sky-500 mr-2 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="p-4 bg-sky-500/5 border border-sky-500/20 rounded-lg text-center">
+                <p className="text-sky-400 font-medium">More output. Less land. Lower cost.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cost Clarity Section */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">THE PHILOSOPHY</h2>
-            <p className="text-3xl md:text-4xl font-light text-white mb-4">
-              Why O&G Standards Matter for Geothermal
-            </p>
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm mb-6">
+              <CircleDollarSign className="h-4 w-4 mr-2" />
+              Cost Clarity
+            </div>
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
+              Lowest Cost ≠ Lowest Bid
+            </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              The same engineering discipline that handles million-dollar drilling operations 
-              is exactly what's needed to make geothermal work for every home and building.
+              "Lowest cost" does <span className="text-white">not</span> mean cutting corners. It means engineering smarter.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {costBenefits.map((item, index) => (
+              <div
+                key={index}
+                className="p-6 bg-slate-950/50 border border-slate-800 rounded-lg hover:border-emerald-500/50 transition-all hover-lift"
+              >
+                <div className="text-emerald-400 mb-4">{item.icon}</div>
+                <h3 className="text-lg font-medium text-white mb-1">{item.label}</h3>
+                <p className="text-sm text-slate-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-slate-950/50 border border-slate-800 rounded-lg p-8">
+            <h3 className="text-lg font-medium text-white mb-6 text-center">The Result: A Geothermal System That Is</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {systemBenefits.map((item, index) => (
+                <div key={index} className="flex items-center justify-center p-4 bg-slate-900/50 rounded-lg">
+                  <span className="text-sky-500 mr-2">{item.icon}</span>
+                  <span className="text-slate-300 text-sm">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Optimization Levers Section */}
+      <section className="py-24 bg-slate-950 border-y border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">HOW WE ACHIEVE IT</h2>
+              <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
+                Optimization Levers
+                <br />
+                <span className="gradient-text font-semibold">We Control</span>
+              </h3>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                We maximize BTU/ft² by engineering every controllable variable:
+              </p>
+              <p className="text-slate-500 italic">
+                Every lever is quantified. Every assumption is tested.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {optimizationLevers.map((lever, index) => (
+                <div
+                  key={index}
+                  className="flex items-start p-4 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all"
+                >
+                  <Maximize2 className="h-5 w-5 text-sky-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-slate-300 text-sm">{lever}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Universal Application Section */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">UNIVERSAL APPLICATION</h2>
+            <h3 className="text-3xl md:text-4xl font-light text-white mb-4">
+              Applies to Every Project —
+              <span className="gradient-text font-semibold"> Simple or Complex</span>
+            </h3>
+            <p className="text-slate-400 max-w-2xl mx-auto mb-4">
+              This design principle applies to classic vertical fields, urban or constrained sites, 
+              collocated and directional systems, and projects of any scale.
+            </p>
+            <p className="text-white">
+              The geometry may change. <span className="text-sky-400">The objective does not.</span>
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {comparison.map((item, index) => (
+            {sectors.map((sector, index) => (
               <div
                 key={index}
-                className="group relative p-8 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all hover-lift"
+                className="p-8 bg-slate-950/50 border border-slate-800 rounded-lg text-center hover:border-sky-500/50 transition-all hover-lift"
               >
-                <div className="text-sky-500 mb-6 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                
-                {/* O&G side */}
-                <div className="mb-6 pb-6 border-b border-slate-700">
-                  <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Oil & Gas</div>
-                  <div className="text-2xl font-light text-white">{item.og}</div>
-                  <div className="text-sm text-slate-400">{item.ogLabel}</div>
-                </div>
-                
-                {/* Arrow */}
-                <div className="absolute left-1/2 -translate-x-1/2 -mt-3">
-                  <Zap className="h-5 w-5 text-sky-500" />
-                </div>
-                
-                {/* Geo side */}
-                <div className="pt-2">
-                  <div className="text-xs text-cyan-400 uppercase tracking-wider mb-1">Geothermal</div>
-                  <div className="text-2xl font-light gradient-text">{item.geo}</div>
-                  <div className="text-sm text-slate-400">{item.geoLabel}</div>
-                </div>
+                <div className="text-sky-500 mb-4 flex justify-center">{sector.icon}</div>
+                <div className="text-xl font-light text-white">{sector.label}</div>
               </div>
             ))}
           </div>
@@ -191,7 +313,7 @@ const HomePage = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">CAPABILITIES</h2>
@@ -204,8 +326,7 @@ const HomePage = () => {
             {capabilities.map((cap, index) => (
               <div
                 key={index}
-                className="group p-6 bg-slate-950/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all hover-lift"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group p-6 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-sky-500/50 transition-all hover-lift"
               >
                 <div className="text-sky-500 mb-4 group-hover:text-cyan-400 group-hover:scale-110 transition-all">
                   {cap.icon}
@@ -214,67 +335,6 @@ const HomePage = () => {
                 <p className="text-sm text-slate-400 leading-relaxed">{cap.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-slate-950 border-y border-slate-800 animated-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="text-4xl md:text-5xl font-light text-sky-400 mb-2 group-hover:scale-110 transition-transform">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-slate-500 tracking-wide">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sectors Section */}
-      <section className="py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-sm font-semibold text-sky-400 tracking-widest mb-3">SECTORS</h2>
-              <p className="text-3xl md:text-4xl font-light text-white mb-6">
-                Serving Contractors Across All Markets
-              </p>
-              <p className="text-slate-400 leading-relaxed mb-8">
-                From residential installations to large-scale commercial and industrial projects, 
-                GeoStellar provides the technical backbone that contractors and engineering firms 
-                need to deliver exceptional geothermal systems.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Thermal conductivity testing & analysis",
-                  "System design & engineering",
-                  "Quality assurance & commissioning",
-                  "Ongoing performance monitoring"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-slate-300 group">
-                    <CheckCircle2 className="h-5 w-5 text-sky-500 mr-3 flex-shrink-0 group-hover:text-cyan-400 transition-colors" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {sectors.map((sector, index) => (
-                <div
-                  key={index}
-                  className="p-8 bg-slate-950/50 border border-slate-800 rounded-lg text-center hover:border-sky-500/50 transition-all hover-lift"
-                >
-                  <div className="text-sky-500 mb-4 flex justify-center group-hover:scale-110 transition-transform">{sector.icon}</div>
-                  <div className="text-2xl font-light text-white mb-1">{sector.count}</div>
-                  <div className="text-sm text-slate-500">{sector.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
