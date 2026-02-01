@@ -5,7 +5,7 @@ const BlogPage = () => {
   const featuredPost = {
     title: "Why O&G Standards Matter in Geothermal Engineering",
     excerpt: "The geothermal industry is growing rapidly, but quality standards haven't kept pace. Here's why adopting oil & gas industry practices is critical for long-term system performance and reliability.",
-    author: "Alex Petrov",
+    author: "GeoStellar Team",
     date: "January 28, 2026",
     readTime: "8 min read",
     category: "Industry Insights",
@@ -16,7 +16,7 @@ const BlogPage = () => {
     {
       title: "Thermal Conductivity Testing: Best Practices for Accurate Results",
       excerpt: "Accurate TRT results are the foundation of good system design. We break down the key factors that affect test accuracy and how to ensure reliable data.",
-      author: "Sarah Mitchell",
+      author: "GeoStellar Team",
       date: "January 21, 2026",
       readTime: "6 min read",
       category: "Technical",
@@ -25,7 +25,7 @@ const BlogPage = () => {
     {
       title: "The Hidden Costs of Poor Quality Control in Geothermal",
       excerpt: "Skipping QC steps might save time upfront, but the long-term costs can be substantial. A look at real-world examples and how to avoid common pitfalls.",
-      author: "James Chen",
+      author: "GeoStellar Team",
       date: "January 14, 2026",
       readTime: "5 min read",
       category: "Quality Assurance",
@@ -34,7 +34,7 @@ const BlogPage = () => {
     {
       title: "DTS Monitoring: The Future of Geothermal Performance Verification",
       excerpt: "Distributed Temperature Sensing offers unprecedented insight into system performance. Here's how we're using this technology to optimize installations.",
-      author: "Sarah Mitchell",
+      author: "GeoStellar Team",
       date: "January 7, 2026",
       readTime: "7 min read",
       category: "Technology",
@@ -43,7 +43,7 @@ const BlogPage = () => {
     {
       title: "Designing for the Northeast: Regional Considerations",
       excerpt: "Ground conditions, climate patterns, and regulatory requirements vary significantly across the Northeast. Key design considerations for optimal performance.",
-      author: "David Kumar",
+      author: "GeoStellar Team",
       date: "December 28, 2025",
       readTime: "6 min read",
       category: "Design",
@@ -52,7 +52,7 @@ const BlogPage = () => {
     {
       title: "Commissioning Done Right: A Step-by-Step Guide",
       excerpt: "System commissioning is where design meets reality. Our comprehensive approach ensures every system performs to specification from day one.",
-      author: "Elena Volkov",
+      author: "GeoStellar Team",
       date: "December 21, 2025",
       readTime: "8 min read",
       category: "Technical",
@@ -61,7 +61,7 @@ const BlogPage = () => {
     {
       title: "The Economics of Precision: Why Quality Engineering Pays Off",
       excerpt: "Higher upfront engineering costs often lead to lower total project costs. We analyze the ROI of investing in proper design and QC.",
-      author: "Maria Santos",
+      author: "GeoStellar Team",
       date: "December 14, 2025",
       readTime: "5 min read",
       category: "Business",
@@ -176,9 +176,10 @@ const BlogPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <article
+              <Link
                 key={index}
-                className="group bg-slate-950/50 border border-slate-800 rounded-lg overflow-hidden hover:border-sky-500/50 transition-all"
+                to={`/blog/${post.slug}`}
+                className="group bg-slate-950/50 border border-slate-800 rounded-lg overflow-hidden hover:border-sky-500/50 transition-all block"
               >
                 {/* Image placeholder */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 h-40 flex items-center justify-center">
@@ -206,7 +207,7 @@ const BlogPage = () => {
                     <span className="text-xs text-slate-600">{post.date}</span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 
