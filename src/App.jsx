@@ -6,7 +6,7 @@ const services = [
     title: 'Drilling Licenses & Permits',
     tagline: 'Keep projects legal across 6 NE states',
     bullets: [
-      'Qualified Supervisor — MA, RI, CT, ME, NJ, NY',
+      'Qualified Supervisor â€” MA, RI, CT, ME, NJ, NY',
       'Permit applications & agency coordination',
       'Well completion reports & state filing',
     ],
@@ -27,7 +27,7 @@ const services = [
     bullets: [
       'Rig performance benchmarking & AutoDriller tuning',
       'NPT root-cause analysis & prevention',
-      'Grout QC — mix, placement, thermal performance',
+      'Grout QC â€” mix, placement, thermal performance',
     ],
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -43,7 +43,7 @@ const services = [
     tagline: 'Verified subsurface data, not estimates',
     bullets: [
       'Bore trajectory surveys inside 1.5" HDPE quad-loop',
-      'Thermal Response Test — conductivity & bore resistance',
+      'Thermal Response Test â€” conductivity & bore resistance',
       'Fiber DTS + long-term aquifer thermal profiling',
     ],
     icon: (
@@ -61,7 +61,7 @@ const services = [
     tagline: 'Engineering from geology to loop commissioning',
     bullets: [
       'Borefield sizing, spacing & thermal interference model',
-      'Loop design — pipe, header, flow, pressure',
+      'Loop design â€” pipe, header, flow, pressure',
       'Design-assist for GCs, MEP engineers, HVAC contractors',
     ],
     icon: (
@@ -78,7 +78,7 @@ const services = [
     title: 'Inclined & Collocated Drilling',
     tagline: 'Sites vertical drilling cannot reach',
     bullets: [
-      'True directional control — not mast tilt',
+      'True directional control â€” not mast tilt',
       'Multi-bore from single surface entry point',
       'Rig conversion engineering, anti-collision compliance',
     ],
@@ -98,7 +98,7 @@ const services = [
     title: 'HVAC Sales & ROI Support',
     tagline: 'Turn objections into signed contracts',
     bullets: [
-      'Site feasibility study — loads, oeology, bore count',
+      'Site feasibility study â€” loads, oeology, bore count',
       '20-year NPV model with IRA incentive stack',
       'Proposal narrative & technical responses to AHJ/lenders',
     ],
@@ -112,10 +112,10 @@ const services = [
 ]
 
 const credentials = [
-  { value: 'MA · RI · CT · ME · NJ · NY', label: 'Licensed Driller' },
+  { value: 'MA Â· RI Â· CT Â· ME Â· NJ Â· NY', label: 'Licensed Driller' },
   { value: '20+ yrs', label: 'Drilling engineering' },
   { value: '32,000 ft', label: 'Max ERD well (Qatar)' },
-  { value: '42%', label: 'Bore reduction — inclined design' },
+  { value: '42%', label: 'Bore reduction â€” inclined design' },
   { value: 'IGSHPA', label: 'Accredited Installer' },
   { value: 'AEE GSD', label: 'Geothermal specialist' },
 ]
@@ -132,7 +132,7 @@ export default function App() {
         </div>
         <div className="nav-contact">
           <a href="mailto:dmitry@geostellar.io">dmitry@geostellar.io</a>
-          <span className="nav-sep">·</span>
+          <span className="nav-sep">Â·</span>
           <a href="tel:+17814281982">+1 781 428 1982</a>
         </div>
       </nav>
@@ -146,11 +146,11 @@ export default function App() {
             <span className="hero-accent">Applied to geothermal.</span>
           </h1>
           <p className="hero-sub">
-            We design, supervise, and engineer geothermal ground systems — vertical, inclined, and collocated — for drilling companies, general contractors, and developers across the Northeast.
+            We design, supervise, and engineer geothermal ground systems â€” vertical, inclined, and collocated â€” for drilling companies, general contractors, and developers across the Northeast.
           </p>
           <div className="hero-cta">
             <a href="mailto:dmitry@geostellar.io" className="btn-primary">Start a conversation</a>
-            <span className="hero-note">Licensed driller · 6 states · Based in MA</span>
+            <span className="hero-note">Licensed driller Â· 6 states Â· Based in MA</span>
           </div>
         </div>
         <div className="hero-drill">
@@ -164,7 +164,7 @@ export default function App() {
             <line x1="68" y1="290" x2="76" y2="290" stroke="#3dba6f" strokeWidth="1"/>
             <text x="79" y="224" fontSize="9" fill="#4a7a52" fontFamily="monospace">150m</text>
             <text x="79" y="259" fontSize="9" fill="#4a7a52" fontFamily="monospace">300m</text>
-            <text x="79" y="294" fontSize="9" fill="#3dba6f" fontFamily="monospace">TRT ✓</text>
+            <text x="79" y="294" fontSize="9" fill="#3dba6f" fontFamily="monospace">TRT âœ“</text>
             <polygon points="55,310 65,310 60,320" fill="#3dba6f"/>
             <path d="M60 210 Q75 240 88 310" stroke="#3dba6f" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.5"/>
             <polygon points="85,307 91,314 90,305" fill="#3dba6f" opacity="0.5"/>
@@ -188,7 +188,8 @@ export default function App() {
               <p className="svc-tagline">{s.tagline}</p>
               <ul className="svc-bullets">
                 {s.bullets.map((b, i) => (
-                  <li key={i}>{b=,�b                  ))}
+                  <li key={i}>{b}</li>
+                  ))}
               </ul>
             </div>
           ))}
@@ -218,7 +219,7 @@ export default function App() {
       </section>
 
       <footer className="footer">
-        <span>GeoStellar Engineering LLC · Stoughton, MA · EIN 41-4724463</span>
+        <span>GeoStellar Engineering LLC Â· Stoughton, MA Â· EIN 41-4724463</span>
         <span>GeoStellar Engineering LLC (est. 2026, MA) is not affiliated with the former Geostellar Inc. of West Virginia.</span>
       </footer>
 
